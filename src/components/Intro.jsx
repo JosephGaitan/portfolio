@@ -9,7 +9,7 @@ const Intro = () => {
         <img alt="img" src={imagen} />
         <p >Front-end Developer</p>
         <h1 className="text">{`<h1>Joseph Gaitan</h1>`}</h1>
-        <Link to="/">
+        <Link to="/home">
           <span className="button ">
             Enter my World
           </span>

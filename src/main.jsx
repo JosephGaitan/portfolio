@@ -9,11 +9,11 @@ import Home from './pages/Home'
 
 const router =  createBrowserRouter([
   {
-    path:'/start',
+    path:'/',
     element: <Start />
   },
   {
-    path:'/',
+    path:'/home',
     element: <Home/>,
   }
 ])
