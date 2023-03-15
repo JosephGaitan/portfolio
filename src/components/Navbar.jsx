@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div className="fixed">
       <nav className="navContainer">
         <div className={`links ${active ? "active" : ""}`}>
           <a>About me</a>
@@ -47,7 +47,7 @@ const Navbar = () => {
           )}
         </a>
       </nav>
-    </>
+    </div>
   );
 };
 
