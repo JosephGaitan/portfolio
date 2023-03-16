@@ -3,7 +3,7 @@
   --blue: #2772eb;
   --darkBlue: #021963;
   --darkerRed: rgb(252, 197, 211);
-  --softRed: #fff5f5;
+  --softRed: rgb(255, 245, 245);
   --softViolet: rgb(126, 102, 199);
   font-family: "Bitter", serif;
 }
@@ -395,7 +395,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 10px 20px 10px;
+  }
+
+  .articleText {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -433,6 +440,12 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 40px 40px 20px 40px;
   }
+  .articleText{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 40px 40px 20px 40px;
+  }
 }
 
 .divImg {
@@ -440,6 +453,15 @@ h3 {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.divImg2 {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+
 }
 
 .meImg {

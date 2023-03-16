@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import image from "../assets/me.png";
+import flowers from "../assets/flowers.png"
 import SvgCircle from "../components/SvgCircle";
 import Divider from "../components/Divider";
 import SvgWalk from "../components/SvgWalk";
@@ -24,7 +25,7 @@ const Home = () => {
               </p>
             </div>
             <div className="divImg">
-              <img className="meImg" alt="img" src={image} />
+              <img  className="meImg" alt="img" src={image} />
             </div>
           </section>
           <Divider />
@@ -36,8 +37,8 @@ const Home = () => {
               implement <span>best practices</span> and a lot of planning.
             </p>
             <div className="svgCircleText">
-              <div>
-                <SvgCircle />
+              <div className="divImg2">
+                <img src={flowers} height="320px" width="320px" alt="flwsImg"/>
               </div>
               <div>
                 <p>
@@ -57,7 +58,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <article className="articleText svgCircleText">
+            <article className="articleText ">
               <div>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
