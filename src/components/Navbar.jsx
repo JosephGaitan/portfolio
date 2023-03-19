@@ -19,15 +19,19 @@ const Navbar = () => {
 
   const handleClick = () => {
     setActive(!active);
+    if(!active){
+      document.body.style.overflow = 'hidden'
+    } else {document.body.style.overflow = 'auto'}
   };
+
 
   return (
     <div className="fixed">
       <nav className="navContainer">
         <div className={`links ${active ? "active" : ""}`}>
-          <a>About me</a>
-          <a>Skills</a>
-          <a>Projects</a>
+          <a href="#aboutMe"  onClick={()=>{setActive(!active), document.body.style.overflow = 'auto' }}>About me</a>
+          <a href="#work" onClick={()=>{setActive(!active), document.body.style.overflow = 'auto' }}>work</a>
+          <a onClick={()=>{setActive(!active), document.body.style.overflow = 'auto' }}>Projects</a>
         </div>
         <div className="burger">
           <BurgerButton active={active} handleClick={handleClick} />

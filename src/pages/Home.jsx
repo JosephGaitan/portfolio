@@ -1,20 +1,43 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import image from "../assets/me.png";
-import flowers from "../assets/flowers.png"
+import image from "../assets/me1.png";
+import flowers from "../assets/flowers.png";
 import SvgCircle from "../components/SvgCircle";
 import Divider from "../components/Divider";
-import SvgWalk from "../components/SvgWalk";
+import imgJogg from "../assets/jogg.png";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [watching, setWatching] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          const imgs = entry.target.querySelectorAll(".delayed-img");
+          imgs.forEach((img, index) => {
+            setTimeout(() => {
+              img.classList.add("show");
+            }, (index + 1) * 1000); // ajusta el tiempo de retardo aquí (en milisegundos)
+          });
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <div className="home">
       <header>
         <Navbar />
       </header>
       <main>
-        <div className="main">
-          <section id="aboutMe">
+        <div className="main main2">
+          <section id="aboutMe" className="hidden">
             <div>
               <h2>
                 Hi! My name is <span>Joseph.</span>
@@ -25,11 +48,13 @@ const Home = () => {
               </p>
             </div>
             <div className="divImg">
-              <img  className="meImg" alt="img" src={image} />
+              <img className="meImg" alt="img" src={image} />
             </div>
           </section>
-          <Divider />
-          <section className="aboutMe">
+          <div className="hidden">
+            <Divider />
+          </div>
+          <section className={`aboutMe hidden`}>
             <h3>About me</h3>
             <p>
               My emphasis is on building <span>efficient and optimized</span>{" "}
@@ -38,7 +63,13 @@ const Home = () => {
             </p>
             <div className="svgCircleText">
               <div className="divImg2">
-                <img src={flowers} height="320px" width="320px" alt="flwsImg"/>
+                <img
+                  className="delayed-img"
+                  src={flowers}
+                  height="320px"
+                  width="320px"
+                  alt="flwsImg"
+                />
               </div>
               <div>
                 <p>
@@ -58,21 +89,55 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <article className="articleText ">
+            <article className="articleText  hidden">
               <div>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  nobis quas perferendis quidem facere error odit ipsum eum sunt
-                  delectus, autem aspernatur dolorum possimus assumenda velit
-                  voluptatem illo laboriosam quia.
+                  I've been building all kinds of apps with the most popular
+                  libraries like reactJs. I improved my javascript skills,
+                  learning logic and algorithmic thinking. Right now, my life
+                  revolves around programming, my friends-family and exercising,
+                  the latter oxygenates my brain and makes me more efficient as
+                  a professional.
                 </p>
               </div>
               <div>
-                <SvgWalk />
+                <img
+                  className="delayed-img"
+                  src={imgJogg}
+                  alt="jogging"
+                  height="320px"
+                />
               </div>
             </article>
           </section>
         </div>
+        <div className="hidden">
+          <Divider />
+        </div>
+        <section className="main" id="work">
+          <article className="aboutMe hidden">
+            <h2>My <span>work</span> Aproach</h2>
+            <p>
+              <span>
+                I revel in the challenge of turning complex ideas into elegant
+                solutions.
+              </span>
+            </p>
+            <div className="cards">
+              <div><img className="trin"/></div>
+            </div>
+          </article>
+          <article className="aboutMe hidden">
+          <p>
+              Whether crafting <span>intuitive</span> user interfaces or
+              designing complex systems from the ground up, I approach every
+              task with a sense of curiosity and a commitment to{" "}
+              <span>excellence</span>. In the end, my work is not just about
+              code or software, but about <span>transforming the world</span>, {" "}
+              one pixel at a time.
+            </p>
+          </article>
+        </section>
       </main>
     </div>
   );

@@ -13,7 +13,7 @@ const Divider = () => {
       </p>
       <svg className="svgLine" width="1" fill="#021963" opacity="50%">
         <line x1="0" y1="0" x2="0" y2="700" stroke=" #021963" />
-        Sorry, your browser does not support inline SVG.
+        Sorry, your browser does not support  SVG.
       </svg>
     </div>
   );
