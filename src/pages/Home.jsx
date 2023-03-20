@@ -8,6 +8,7 @@ import Button from "../components/Button";
 import imgJogg from "../assets/jogg.png";
 import seller from "../assets/seller.png";
 import rick from "../assets/rickNmorty.png";
+import cal from "../assets/cal.png";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -248,9 +249,46 @@ const Home = () => {
                 case the info in the API changes)
               </p>
               <div className="divImg2">
-                <Button  link={"https://rickandmorty-api-joe.netlify.app/"} text="Live" />
-                <Button  link={"https://github.com/JosephGaitan/rick-react"} text="Code" />
+                <Button
+                  link={"https://rickandmorty-api-joe.netlify.app/"}
+                  text="Live"
+                />
+                <Button
+                  link={"https://github.com/JosephGaitan/rick-react"}
+                  text="Code"
+                />
               </div>
+            </div>
+          </article>
+          <article className="hidden aboutMe reverseColumn gridContainer">
+            <div>
+              <h3>Expenses Planner</h3>
+              <p>
+                <span>Control your expenses</span> by using this App. Add expenses and
+                organize them by category. Every time an expense is added, the
+                calculator will let you know the new available budget. Every
+                expense can be filtered, deleted or modified. This project was
+                built with Reactjs, JavaScript and CSS.
+              </p>
+              <div className="divImg2">
+                <Button
+                  link={"https://expenses-planner-react.netlify.app/"}
+                  text="Live"
+                />
+                <Button
+                  link={"https://github.com/JosephGaitan/expenses_planner"}
+                  text="Code"
+                />
+              </div>
+            </div>
+            <div className="divImg2">
+              <img
+                className="delayed-img "
+                src={cal}
+                alt="icons"
+                height="320px"
+                width="320px"
+              />
             </div>
           </article>
         </section>
