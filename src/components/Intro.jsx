@@ -1,6 +1,7 @@
 import React from "react";
 import imagen from "../assets/programmer.gif";
-import { Link } from "react-router-dom";
+import Button from "./Button";
+
 
 const Intro = () => {
   return (
@@ -9,11 +10,7 @@ const Intro = () => {
         <img alt="img" src={imagen} />
         <p >Front-end Developer</p>
         <h1 className="text">{`<h1>Joseph Gaitan</h1>`}</h1>
-        <Link to="/home">
-          <span className="button ">
-            Enter my World
-          </span>
-        </Link>
+          <Button link={"/home"} text={"Enter My World"}/>
       </header>
     </div>
   );
