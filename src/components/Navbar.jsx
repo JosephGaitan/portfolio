@@ -8,30 +8,52 @@ const Navbar = () => {
   const [above, setAbove] = useState(false);
 
   const handleMouseEnter = () => {
-      if(!above){
-        setAbove(true);
-      }
-  }
+    if (!above) {
+      setAbove(true);
+    }
+  };
 
-  const handleMouseLeave = () =>{
-    setAbove(!above)
-  }
+  const handleMouseLeave = () => {
+    setAbove(!above);
+  };
 
   const handleClick = () => {
     setActive(!active);
-    if(!active){
-      document.body.style.overflow = 'hidden'
-    } else {document.body.style.overflow = 'auto'}
+    if (!active) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
-
 
   return (
     <div className="fixed">
       <nav className="navContainer">
         <div className={`links ${active ? "active" : ""}`}>
-          <a href="#aboutMe"  onClick={()=>{setActive(!active), document.body.style.overflow = 'auto' }}>About me</a>
-          <a href="#work" onClick={()=>{setActive(!active), document.body.style.overflow = 'auto' }}>work</a>
-          <a onClick={()=>{setActive(!active), document.body.style.overflow = 'auto' }}>Projects</a>
+          <a
+            href="#aboutMe"
+            onClick={() => {
+              setActive(!active), (document.body.style.overflow = "auto");
+            }}
+          >
+            About me
+          </a>
+          <a
+            href="#work"
+            onClick={() => {
+              setActive(!active), (document.body.style.overflow = "auto");
+            }}
+          >
+            work
+          </a>
+          <a
+            href="#projects"
+            onClick={() => {
+              setActive(!active), (document.body.style.overflow = "auto");
+            }}
+          >
+            Projects
+          </a>
         </div>
         <div className="burger">
           <BurgerButton active={active} handleClick={handleClick} />

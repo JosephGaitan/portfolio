@@ -4,9 +4,10 @@ import image from "../assets/me1.png";
 import flowers from "../assets/flowers.png";
 import icons from "../assets/icons.png";
 import Divider from "../components/Divider";
-import Button from "../components/Button"
+import Button from "../components/Button";
 import imgJogg from "../assets/jogg.png";
 import seller from "../assets/seller.png";
+import rick from "../assets/rickNmorty.png";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -56,7 +57,7 @@ const Home = () => {
           <div className="hidden">
             <Divider />
           </div>
-          <section className={`aboutMe hidden`}>
+          <section className="aboutMe  hidden">
             <h3>About me</h3>
             <p>
               My emphasis is on building <span>efficient and optimized</span>{" "}
@@ -121,7 +122,7 @@ const Home = () => {
         <div className="hidden">
           <Divider />
         </div>
-        <section className="main aboutMe workContainer" id="work">
+        <section className="main aboutMe" id="work">
           <div className="hidden">
             <h2>
               My <span>work</span> Aproach
@@ -141,7 +142,7 @@ const Home = () => {
               one pixel at a time.
             </p>
           </div>
-          <article className="hidden aboutMe skillsContainer">
+          <article className="hidden aboutMe gridContainer">
             <div className="divImg2">
               <img
                 className="delayed-img"
@@ -168,7 +169,7 @@ const Home = () => {
               </p>
             </div>
           </article>
-          <article className="hidden aboutMe skillsContainer reverseColumn">
+          <article className="hidden aboutMe gridContainer reverseColumn">
             <div>
               <h3>Apart from technical skills</h3>
               <p>
@@ -186,7 +187,7 @@ const Home = () => {
             </div>
             <div className="divImg2">
               <img
-                className="delayed-img"
+                className="delayed-img me"
                 src={seller}
                 alt="icons"
                 height="320px"
@@ -198,17 +199,59 @@ const Home = () => {
             <p>
               Currently, my focus is on front-end development, but I am eager to
               expand my knowledge and expertise to the backend world. I am
-              particularly interested in <span>learning</span> NodeJS and databases like
-              MongoDB since I want the <span>full MERN stack</span>.
+              particularly interested in <span>learning</span> NodeJS and
+              databases like MongoDB since I want the{" "}
+              <span>full MERN stack</span>.
             </p>
             <p>
               I would be honored to be considered for any positions that align
-              with my skills. <span>Thank you</span> for considering my application, and I
-              look forward to discussing my qualifications with you further.
+              with my skills. <span>Thank you</span> for considering my
+              application, and I look forward to discussing my qualifications
+              with you further.
             </p>
-              <div className="divImg2"><Button 
-              link={"mailto:joegaitan195@gmail.com?subject=Hi Joseph!, I would like to hire you"} 
-              text={"Get In Touch"} /></div>
+            <div className="divImg2">
+              <Button
+                link={
+                  "mailto:joegaitan195@gmail.com?subject=Hi Joseph!, I would like to hire you"
+                }
+                text={"Get In Touch"}
+              />
+            </div>
+          </article>
+        </section>
+        <div className="hidden">
+          <Divider />
+        </div>
+        <section className="main aboutMe" id="projects">
+          <article className="hidden aboutMe gridContainer">
+            <div className="divImg2">
+              <img
+                className="delayed-img "
+                src={rick}
+                alt="icons"
+                height="320px"
+              />
+            </div>
+            <div>
+              <h3>Rick and Morty wiki App</h3>
+              <p>
+                This project was created using{" "}
+                <span>the rick and morty API</span>, JavaScript, Reactjs,
+                React-Router-DOM, TailwindCSS and ChartJs. In this app you will
+                find a complete list of characters from rick and morty. They can
+                be filtered using the searching bar I created or just by
+                clicking “next”. It also comes with different pages that catch
+                information of all the existing places and episodes of the show.
+                Lastly an automatic graph that shows the genders and status of
+                the characters. I used that info to show the mortality rate of
+                each episode. (it will auto update the stats of the graph in
+                case the info in the API changes)
+              </p>
+              <div className="divImg2">
+                <Button  link={"https://rickandmorty-api-joe.netlify.app/"} text="Live" />
+                <Button  link={"https://github.com/JosephGaitan/rick-react"} text="Code" />
+              </div>
+            </div>
           </article>
         </section>
       </main>

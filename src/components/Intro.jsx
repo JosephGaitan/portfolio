@@ -1,16 +1,18 @@
 import React from "react";
-import imagen from "../assets/programmer.gif";
+import { Link } from "react-router-dom";
+import imagen from "../assets/me1.png";
 import Button from "./Button";
-
 
 const Intro = () => {
   return (
     <div className="start">
       <header className="headerIntro">
         <img alt="img" src={imagen} />
-        <p >Front-end Developer</p>
+        <p>Front-end Developer</p>
         <h1 className="text">{`<h1>Joseph Gaitan</h1>`}</h1>
-          <Button link={"/home"} text={"Enter My World"}/>
+        <Link to="/home">
+          <Button text={"Enter My World"} />
+        </Link>
       </header>
     </div>
   );

@@ -43,7 +43,7 @@ body img{
   position: absolute;
   opacity: 40%;
   filter: blur(30px);
-  animation: moveUp 120s infinite alternate;
+  animation: moveUp 30s infinite alternate;
 }
 
 .secondCircle {
@@ -54,7 +54,7 @@ body img{
   position: absolute;
   opacity: 20%;
   filter: blur(20px);
-  animation: moveDown 60s infinite alternate;
+  animation: moveDown 30s infinite alternate;
 }
 
 .thirdCircle {
@@ -480,6 +480,7 @@ h3 {
 
 
 
+
 .meImg {
   width: 320px;
   height: 320px;
@@ -530,7 +531,7 @@ h3 {
 .divSvgLine span {
   color: black;
   display: inline-block;
-  opacity: 50%;
+  opacity: 30%;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 8px;
@@ -656,7 +657,7 @@ h3 {
 }
 
 @media (min-width: 870px){
-  .skillsContainer{
+  .gridContainer{
     display: grid;
     align-items: center;
     justify-content: center;
@@ -682,3 +683,4 @@ h3 {
   text-decoration: none;
   color: var(--softViolet);
 }
+
