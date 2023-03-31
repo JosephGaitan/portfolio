@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imagen from "../assets/me1.png";
+import imagen from "../assets/me1.jpg";
 import Button from "./Button";
 
 const Intro = () => {

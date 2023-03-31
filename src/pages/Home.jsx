@@ -1,14 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import image from "../assets/me1.png";
-import flowers from "../assets/flowers.png";
+import image from "../assets/me1.jpg";
+import flowers from "../assets/flowers.jpg";
 import icons from "../assets/icons.png";
 import Divider from "../components/Divider";
 import Button from "../components/Button";
-import imgJogg from "../assets/jogg.png";
-import seller from "../assets/seller.png";
+import imgJogg from "../assets/jogg.jpg";
+import seller from "../assets/seller.jpg";
 import rick from "../assets/rickNmorty.png";
 import cal from "../assets/cal.png";
+import git from "../assets/github.png";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -40,8 +41,8 @@ const Home = () => {
         <Navbar />
       </header>
       <main>
-        <div className="main main2">
-          <section id="aboutMe" className="hidden">
+        <section id="aboutMe" className="styledContainer main">
+          <article className="hidden styledContainer gridContainer reverseColumn">
             <div>
               <h2>
                 Hi! My name is <span>Joseph.</span>
@@ -51,79 +52,78 @@ const Home = () => {
                 help you create the next <span>global hit App.</span>{" "}
               </p>
             </div>
-            <div className="divImg">
+            <div className="divImg2">
               <img className="meImg" alt="img" src={image} />
             </div>
-          </section>
-          <div className="hidden">
-            <Divider />
-          </div>
-          <section className="aboutMe  hidden">
+          </article>
+        </section>
+        <div className="hidden">
+          <Divider />
+        </div>
+        <section className="main styledContainer">
+          <div className="styledContainer hidden">
             <h3>About me</h3>
             <p>
               My emphasis is on building <span>efficient and optimized</span>{" "}
               software in a creative way. When it comes to coding, I always
               implement <span>best practices</span> and a lot of planning.
             </p>
-            <div className="svgCircleText">
-              <div className="divImg2">
-                <img
-                  className="delayed-img"
-                  src={flowers}
-                  height="320px"
-                  width="320px"
-                  alt="flwsImg"
-                />
-              </div>
-              <div>
-                <p>
-                  I am a <span>coder</span>, a <span>creator</span>, a{" "}
-                  <span>dreamer.</span>
-                </p>
-                <p>
-                  My passion for technology started when I studied electronics
-                  at the age of 18, where I built robots and electric circuits
-                  using Arduino. From there, my love for software development
-                  grew as I started experimenting with various technologies and
-                  coding languages. I even built my own Doom-like video game and
-                  documented the whole process in an amateur blog I coded with
-                  basic knowledge. I didn't even noticed I had started my career
-                  in front-end development with that blog. But I certainly loved
-                  every second I spent working on it.
-                </p>
-              </div>
+          </div>
+          <article className="styledContainer gridContainer hidden">
+            <div className="divImg2">
+              <img
+                className="delayed-img"
+                src={flowers}
+                height="320px"
+                width="320px"
+                alt="flwsImg"
+              />
             </div>
-            <article className="articleText  hidden">
-              <div>
-                <p>
-                  <span>In addition to my programming pursuits</span>, I also
-                  prioritize my physical and mental well-being through regular
-                  exercise. I firmly believe that a healthy body is essential
-                  for a <span>healthy mind</span>, and I have found that staying
-                  active helps me to maintain focus and productivity in all
-                  areas of my life. When I'm not working or exercising, I enjoy
-                  spending time with my loved ones, whether that be through{" "}
-                  <span>quality time</span> with family or socializing with
-                  friends. I believe that maintaining strong connections with
-                  those closest to us is crucial for maintaining a balanced and{" "}
-                  <span>fulfilling life</span>.
-                </p>
-              </div>
-              <div>
-                <img
-                  className="delayed-img"
-                  src={imgJogg}
-                  alt="jogging"
-                  height="320px"
-                />
-              </div>
-            </article>
-          </section>
-        </div>
-        <div className="hidden">
-          <Divider />
-        </div>
-        <section className="main aboutMe" id="work">
+            <div>
+              <p>
+                I am a <span>coder</span>, a <span>creator</span>, a{" "}
+                <span>dreamer.</span>
+              </p>
+              <p>
+                My passion for technology started when I studied electronics at
+                the age of 18, where I built robots and electric circuits using
+                Arduino. From there, my love for software development grew as I
+                started experimenting with various technologies and coding
+                languages. I even built my own Doom-like video game and
+                documented the whole process in an amateur blog I coded with
+                basic knowledge. I didn't even noticed I had started my career
+                in front-end development with that blog. But I certainly loved
+                every second I spent working on it.
+              </p>
+            </div>
+          </article>
+          <article className="styledContainer gridContainer reverseColumn  hidden">
+            <div>
+              <p>
+                <span>In addition to my programming pursuits</span>, I also
+                prioritize my physical and mental well-being through regular
+                exercise. I firmly believe that a healthy body is essential for
+                a <span>healthy mind</span>, and I have found that staying
+                active helps me to maintain focus and productivity in all areas
+                of my life. When I'm not working or exercising, I enjoy spending
+                time with my loved ones, whether that be through{" "}
+                <span>quality time</span> with family or socializing with
+                friends. I believe that maintaining strong connections with
+                those closest to us is crucial for maintaining a balanced and{" "}
+                <span>fulfilling life</span>.
+              </p>
+            </div>
+            <div className="divImg2">
+              <img
+                className="delayed-img"
+                src={imgJogg}
+                alt="jogging"
+                height="320px"
+              />
+            </div>
+          </article>
+        </section>
+        <section className="main styledContainer" id="work">
           <div className="hidden">
             <h2>
               My <span>work</span> Aproach
@@ -143,7 +143,7 @@ const Home = () => {
               one pixel at a time.
             </p>
           </div>
-          <article className="hidden aboutMe gridContainer">
+          <article className="hidden styledContainer gridContainer">
             <div className="divImg2">
               <img
                 className="delayed-img"
@@ -170,7 +170,7 @@ const Home = () => {
               </p>
             </div>
           </article>
-          <article className="hidden aboutMe gridContainer reverseColumn">
+          <article className="hidden styledContainer gridContainer reverseColumn">
             <div>
               <h3>Apart from technical skills</h3>
               <p>
@@ -195,7 +195,7 @@ const Home = () => {
               />
             </div>
           </article>
-          <article className="aboutMe hidden">
+          <article className="styledContainer hidden">
             <h3>Let's work together!</h3>
             <p>
               Currently, my focus is on front-end development, but I am eager to
@@ -223,8 +223,8 @@ const Home = () => {
         <div className="hidden">
           <Divider />
         </div>
-        <section className="main aboutMe" id="projects">
-          <article className="hidden aboutMe gridContainer">
+        <section className="main styledContainer" id="projects">
+          <article className="hidden styledContainer gridContainer">
             <div className="divImg2">
               <img
                 className="delayed-img "
@@ -260,15 +260,16 @@ const Home = () => {
               </div>
             </div>
           </article>
-          <article className="hidden aboutMe reverseColumn gridContainer">
+          <article className="hidden styledContainer reverseColumn gridContainer">
             <div>
               <h3>Expenses Planner</h3>
               <p>
-                <span>Control your expenses</span> by using this App. Add expenses and
-                organize them by category. Every time an expense is added, the
-                calculator will let you know the new available budget. Every
-                expense can be filtered, deleted or modified. This project was
-                built with Reactjs, JavaScript and CSS.
+                <span>Control your expenses</span> by using this App. Add
+                expenses and organize them by category. Every time an expense is
+                added, the calculator will let you know the new available
+                budget. Every expense can be filtered, deleted or modified. It
+                also saves the results on local storage for future uses. This
+                project was built with Reactjs, JavaScript and CSS.
               </p>
               <div className="divImg2">
                 <Button
@@ -289,6 +290,39 @@ const Home = () => {
                 height="320px"
                 width="320px"
               />
+            </div>
+          </article>
+          <article className="hidden styledContainer gridContainer">
+            <div className="divImg2">
+              <img
+                className="delayed-img "
+                src={git}
+                alt="icons"
+                height="320px"
+              />
+            </div>
+            <div>
+              <h3>My GitHub portfolio</h3>
+              <p>
+                If you want to check the code of this <span>portfolio</span>;
+                this is my <span>github</span> profile, there, you will find
+                more projects built by me. Most of them are finished, and some
+                of them are still in their beta version. I personally recommend
+                you to check those that are marked as favorites. Please, feel
+                free to explore my code and projects.
+              </p>
+              <p>
+                <span>
+                  If you have any doubts or recommendations, do not hesitate
+                  contacting me.
+                </span>
+              </p>
+              <div className="divImg2">
+                <Button
+                  link={"https://github.com/JosephGaitan"}
+                  text="GitHub Profile"
+                />
+              </div>
             </div>
           </article>
         </section>
