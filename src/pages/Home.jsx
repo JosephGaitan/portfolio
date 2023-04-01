@@ -123,6 +123,9 @@ const Home = () => {
             </div>
           </article>
         </section>
+        <div className="hidden">
+          <Divider />
+        </div>
         <section className="main styledContainer" id="work">
           <div className="hidden">
             <h2>
